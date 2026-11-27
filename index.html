@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f6f8fc">
+  <meta name="description" content="Find your next favorite read at Chapter & Co., your friendly neighborhood online bookstore.">
+  <title>Chapter &amp; Co. — Find your next favorite</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navigation container" aria-label="Main navigation">
+      <a class="wordmark" href="#home" aria-label="Chapter and Company home"><span class="brand-icon" aria-hidden="true">c.</span> chapter<span class="brand-amp">&amp;</span>co.</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation menu">
+        <span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a class="nav-link" href="#home">Home</a></li>
+        <li><a class="nav-link" href="#books">Books</a></li>
+        <li><a class="nav-link" href="#categories">Categories</a></li>
+        <li><a class="nav-link" href="#contact">Contact</a></li>
+        <li><button class="cart-button" id="cart-button" type="button" aria-label="Shopping cart, 0 books"><span aria-hidden="true">▢</span> Cart <span class="cart-count" id="cart-count" aria-live="polite">0</span></button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-spark" aria-hidden="true">✳</span> YOUR NEXT CHAPTER STARTS HERE</p>
+          <h1>Good books.<br>Great <span class="highlight">company.</span></h1>
+          <p class="hero-description">A little corner of the internet for big imaginations, curious minds, and readers of every kind.</p>
+          <a class="button button-primary" href="#books">Find your next read <span aria-hidden="true">↗</span></a>
+          <div class="hero-note"><span class="note-icon" aria-hidden="true">✦</span><span>Thoughtfully picked, just for you.</span></div>
+        </div>
+        <div class="hero-illustration" role="img" aria-label="A cheerful stack of books with a cup of tea">
+          <div class="illustration-sun"></div>
+          <div class="floating-star star-one" aria-hidden="true">✳</div>
+          <div class="floating-star star-two" aria-hidden="true">✦</div>
+          <div class="plant plant-one"></div>
+          <div class="plant plant-two"></div>
+          <div class="book-stack">
+            <div class="book book-back"><span>THE ART OF SLOW LIVING</span></div>
+            <div class="book book-middle"><span>WILD PLACES</span></div>
+            <div class="book book-front"><span>A LITTLE MORE WONDER</span><i aria-hidden="true">✳</i></div>
+          </div>
+          <div class="tea-cup"><span></span></div>
+          <div class="illustration-caption">MAKE YOURSELF<br>AT HOME</div>
+        </div>
+      </div>
+      <div class="hero-bottom container">
+        <span>GOOD STORIES, SHARED OFTEN</span><span class="hero-bottom-line"></span><span>EST. FOR THE LOVE OF READING</span>
+      </div>
+    </section>
+
+    <section class="section books-section" id="books">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">A SHELF FULL OF POSSIBILITIES</p>
+            <h2>Find your next <span class="highlight">favorite.</span></h2>
+          </div>
+          <p class="section-intro">From page-turners to thought-starters, there’s something here for every kind of reader.</p>
+        </div>
+
+        <div class="book-tools">
+          <label class="search-box" for="book-search">
+            <span class="search-icon" aria-hidden="true">⌕</span>
+            <input id="book-search" type="search" placeholder="Search by book title..." autocomplete="off">
+          </label>
+          <a class="browse-link" href="#categories">Browse categories <span aria-hidden="true">↓</span></a>
+        </div>
+
+        <div class="category-bar" id="categories">
+          <div class="category-heading">
+            <p class="eyebrow">PICK A MOOD</p>
+            <h3>Browse by category</h3>
+          </div>
+          <div class="category-filters" role="group" aria-label="Filter books by category">
+            <button class="filter-button active" type="button" data-category="All" aria-pressed="true">All books <span>08</span></button>
+            <button class="filter-button" type="button" data-category="Fiction" aria-pressed="false">Fiction</button>
+            <button class="filter-button" type="button" data-category="Science" aria-pressed="false">Science</button>
+            <button class="filter-button" type="button" data-category="Technology" aria-pressed="false">Technology</button>
+            <button class="filter-button" type="button" data-category="Biography" aria-pressed="false">Biography</button>
+          </div>
+        </div>
+
+        <div class="books-grid" id="books-grid">
+          <article class="book-card" data-category="Fiction">
+            <div class="cover-wrap cover-peach">
+              <span class="book-label">READER FAVORITE</span>
+              <img class="book-cover" src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&amp;fit=crop&amp;w=560&amp;h=720&amp;q=85" alt="Illustrated book cover in warm terracotta and cream" loading="lazy">
+              <span class="cover-number">01</span>
+            </div>
+            <div class="book-info"><div><p class="book-category">FICTION</p><h3>The Midnight Library</h3><p class="book-author">Matt Haig</p></div><div class="book-buy"><span class="book-price">$16.99</span><button class="add-button" type="button" aria-label="Add The Midnight Library to cart">+</button></div></div>
+          </article>
+          <article class="book-card" data-category="Science">
+            <div class="cover-wrap cover-lavender">
+              <span class="book-label">CURIOUS MINDS</span>
+              <img class="book-cover" src="https://images.unsplash.com/photo-1519682337058-a94d519337bc?auto=format&amp;fit=crop&amp;w=560&amp;h=720&amp;q=85" alt="A book resting beneath a starlit night sky" loading="lazy">
+              <span class="cover-number">02</span>
+            </div>
+            <div class="book-info"><div><p class="book-category">SCIENCE</p><h3>A Brief History of Time</h3><p class="book-author">Stephen Hawking</p></div><div class="book-buy"><span class="book-price">$18.50</span><button class="add-button" type="button" aria-label="Add A Brief History of Time to cart">+</button></div></div>
+          </article>
+          <article class="book-card" data-category="Technology">
+            <div class="cover-wrap cover-blue">
+              <span class="book-label">FRESH PERSPECTIVE</span>
+              <img class="book-cover" src="https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&amp;fit=crop&amp;w=560&amp;h=720&amp;q=85" alt="A thoughtfully arranged stack of colorful books" loading="lazy">
+              <span class="cover-number">03</span>
+            </div>
+            <div class="book-info"><div><p class="book-category">TECHNOLOGY</p><h3>How to Do Nothing</h3><p class="book-author">Jenny Odell</p></div><div class="book-buy"><span class="book-price">$20.00</span><button class="add-button" type="button" aria-label="Add How to Do Nothing to cart">+</button></div></div>
+          </article>
+          <article class="book-card" data-category="Biography">
+            <div class="cover-wrap cover-yellow">
+              <span class="book-label">A LIFE IN WORDS</span>
+              <img class="book-cover" src="https://images.unsplash.com/photo-1543002588-bfa74002ed7e?auto=format&amp;fit=crop&amp;w=560&amp;h=720&amp;q=85" alt="Open pages of a book in a warm, sunlit room" loading="lazy">
+              <span class="cover-number">04</span>
+            </div>
+            <div class="book-info"><div><p class="book-category">BIOGRAPHY</p><h3>Educated</h3><p class="book-author">Tara Westover</p></div><div class="book-buy"><span class="book-price">$17.25</span><button class="add-button" type="button" aria-label="Add Educated to cart">+</button></div></div>
+          </article>
+          <article class="book-card" data-category="Fiction">
+            <div class="cover-wrap cover-green">
+              <span class="book-label">A LITTLE MAGIC</span>
+              <img class="book-cover" src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&amp;fit=crop&amp;w=560&amp;h=720&amp;q=85" alt="Colorful books on a library shelf" loading="lazy">
+              <span class="cover-number">05</span>
+            </div>
+            <div class="book-info"><div><p class="book-category">FICTION</p><h3>Where the Wild Things Are</h3><p class="book-author">Maurice Sendak</p></div><div class="book-buy"><span class="book-price">$14.00</span><button class="add-button" type="button" aria-label="Add Where the Wild Things Are to cart">+</button></div></div>
+          </article>
+          <article class="book-card" data-category="Science">
+            <div class="cover-wrap cover-coral">
+              <span class="book-label">BIG IDEAS, SIMPLY</span>
+              <img class="book-cover" src="https://images.unsplash.com/photo-1495446815901-a7297e633e8d?auto=format&amp;fit=crop&amp;w=560&amp;h=720&amp;q=85" alt="A cozy bookstore filled with books and natural light" loading="lazy">
+              <span class="cover-number">06</span>
+            </div>
+            <div class="book-info"><div><p class="book-category">SCIENCE</p><h3>The Body</h3><p class="book-author">Bill Bryson</p></div><div class="book-buy"><span class="book-price">$19.75</span><button class="add-button" type="button" aria-label="Add The Body to cart">+</button></div></div>
+          </article>
+          <article class="book-card" data-category="Technology">
+            <div class="cover-wrap cover-sky">
+              <span class="book-label">THINK DIFFERENTLY</span>
+              <img class="book-cover" src="https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&amp;fit=crop&amp;w=560&amp;h=720&amp;q=85" alt="A reader enjoying an open book beside a window" loading="lazy">
+              <span class="cover-number">07</span>
+            </div>
+            <div class="book-info"><div><p class="book-category">TECHNOLOGY</p><h3>Creative Selection</h3><p class="book-author">Ken Kocienda</p></div><div class="book-buy"><span class="book-price">$21.00</span><button class="add-button" type="button" aria-label="Add Creative Selection to cart">+</button></div></div>
+          </article>
+          <article class="book-card" data-category="Biography">
+            <div class="cover-wrap cover-lilac">
+              <span class="book-label">INSPIRING STORIES</span>
+              <img class="book-cover" src="https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&amp;fit=crop&amp;w=560&amp;h=720&amp;q=85" alt="A notebook and book ready for a story to be written" loading="lazy">
+              <span class="cover-number">08</span>
+            </div>
+            <div class="book-info"><div><p class="book-category">BIOGRAPHY</p><h3>Becoming</h3><p class="book-author">Michelle Obama</p></div><div class="book-buy"><span class="book-price">$22.50</span><button class="add-button" type="button" aria-label="Add Becoming to cart">+</button></div></div>
+          </article>
+        </div>
+        <p class="empty-state" id="empty-state" hidden>No books found. Try another title or category.</p>
+        <p class="results-count" id="results-count" aria-live="polite">Showing 8 lovely reads</p>
+      </div>
+    </section>
+
+    <section class="reading-note">
+      <div class="container reading-note-inner">
+        <span class="note-decoration" aria-hidden="true">“</span>
+        <p>A book is a <span>little invitation</span> to see the world differently.</p>
+        <span class="note-credit">A NOTE FROM YOUR FRIENDLY BOOKSHOP</span>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-copy">
+          <p class="eyebrow">WE’RE ALL EARS (AND PAGES)</p>
+          <h2>Let’s talk <span class="highlight">books.</span></h2>
+          <p>Need a recommendation, have a question, or just want to say hello? Drop us a note. We love a good book chat.</p>
+          <a class="contact-email" href="mailto:hello@chapterandco.example">hello@chapterandco.example <span aria-hidden="true">↗</span></a>
+          <div class="contact-doodle" aria-hidden="true">✳</div>
+        </div>
+        <form class="contact-form" id="contact-form">
+          <div class="form-row">
+            <label for="name">YOUR NAME<input id="name" name="name" type="text" placeholder="Avery Reader" autocomplete="name" minlength="2" required></label>
+            <label for="email">EMAIL ADDRESS<input id="email" name="email" type="email" placeholder="avery@example.com" autocomplete="email" required></label>
+          </div>
+          <label for="subject">WHAT CAN WE HELP WITH?<input id="subject" name="subject" type="text" placeholder="A book recommendation, perhaps?" minlength="3" required></label>
+          <label for="message">YOUR MESSAGE<textarea id="message" name="message" rows="4" placeholder="Tell us what’s on your mind..." minlength="10" required></textarea></label>
+          <button class="button button-dark" type="submit">Send us a note <span aria-hidden="true">↗</span></button>
+          <p class="form-feedback" id="form-feedback" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a class="wordmark" href="#home"><span class="brand-icon" aria-hidden="true">c.</span> chapter<span class="brand-amp">&amp;</span>co.</a>
+      <p>MADE FOR READERS, WITH LOVE. © <span id="year"></span> CHAPTER &amp; CO.</p>
+      <a class="back-top" href="#home">BACK TO THE TOP ↑</a>
+    </div>
+  </footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
